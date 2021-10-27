@@ -1,28 +1,3 @@
-// ===== SHOW MENU ===== //
-const navMenu = document.getElementById('nav-menu'),
-		closeNav = document.getElementById('nav-close'),
-		toggleNav = document.getElementById('nav-toggle');
-
-// Show Menu
-toggleNav.addEventListener('click', ()=>{
-	navMenu.classList.toggle('show-menu')
-});
-
-// Hide Menu
-closeNav.addEventListener('click', ()=>{
-	navMenu.classList.remove('show-menu')
-});
-// ===== end show menu ===== //
-
-// ===== REMOVE MOBILE MENU ===== //
-const navLink = document.querySelectorAll('.nav__link');
-
-function linkAction(){
-	navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click',linkAction));
-// ===== end remove mobile menu ===== //
-
 // ===== SCROLL SECTIONS ACTIVE LINK ===== //
 const sections = document.querySelectorAll('section[id]');
 
@@ -43,6 +18,15 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive);
 // ===== end scroll sections active menu ===== //
+
+// ===== CHANGE BACKGROUND HEADER ===== //
+function scrollHeader(){
+   const header = document.getElementById('header');
+   
+   if(this.scrollY >= 80) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+}
+window.addEventListener('scroll', scrollHeader);
+// ===== end change background header ===== //
 
 // ===== COUNTDOWN TIMER ===== //
 const countdownDate = new Date("December 25, 2022 08:30:00").getTime();
