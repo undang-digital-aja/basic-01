@@ -147,22 +147,29 @@ sectionTitle.forEach((n, i) => {
 	n.dataset.aos = 'fade-down';
 });
 
-// 5. event -> .event__subtitle, .event__box, .event__place
-
-// 6. countdown timer -> .timer__box
-const timerBox = document.querySelectorAll('.timer__box');
-timerBox.forEach((n, i) => {
-	n.dataset.aos = 'flip-left';
-	n.dataset.aosDelay = i * 100;
+// 5. class css -> .section-subtitle
+const sectionSubtitle = document.querySelectorAll('.section-subtitle');
+sectionSubtitle.forEach((n, i) => {
+	n.dataset.aos = 'fade-down';
+	// n.dataset.aosDelay = i * 100;
 });
 
-// 7. quotes -> .quotes__container
+// 6. event -> .event__subtitle, .event__box, .event__place
 
-// 8. prokes -> .prokes__description, .prokes__img
+// 7. countdown timer -> .timer__box
+// const timerBox = document.querySelectorAll('.timer__box');
+// timerBox.forEach((n, i) => {
+// 	n.dataset.aos = 'flip-left';
+// 	n.dataset.aosDelay = i * 100;
+// });
 
-// 9. message -> .message__container
+// 8. quotes -> .quotes__container
 
-// 10. footer -> .footer__box
+// 9. prokes -> .prokes__description, .prokes__img
+
+// 10. message -> .message__container
+
+// 11. footer -> .footer__box
 const footerBox = document.querySelectorAll('.footer__box');
 footerBox.forEach((n, i) => {
 	n.dataset.aos = 'fade-down';

@@ -35,19 +35,19 @@
 					<li class="nav__item">
 						<a href="#couple" class="nav__link">
 							<i class='bx bxs-heart nav__icon'></i>
-							<span class="nav__name">Mempelai</span>
+							<span class="nav__name">Couple</span>
 						</a>
 					</li>
 					<li class="nav__item">
 						<a href="#event" class="nav__link">
 							<i class='bx bx-calendar-heart nav__icon'></i>
-							<span class="nav__name">Acara</span>
+							<span class="nav__name">Event</span>
 						</a>
 					</li>
 					<li class="nav__item">
 						<a href="#message" class="nav__link">
 							<i class='bx bx-envelope nav__icon'></i>
-							<span class="nav__name">Pesan</span>
+							<span class="nav__name">Wish</span>
 						</a>
 					</li>
 				</ul>
@@ -114,70 +114,65 @@
 
 		<!-- ===== EVENT ===== -->
 		<section class="event section bd-container" id="event">
-			<h2 class="section-title">Acara</h2>
-			<span class="event__subtitle" data-aos="fade-down">Yang Insyaallah akan dilaksanakan:</span>
-
-			<div class="event__container bd-grid">
-				<div class="event__box" data-aos="fade-right">
-					<div class="event__img">
-						<img src="assets/img/event_icon1.png" alt="" class="event__icon">
-					</div>
-					<h2 class="event__title">Akad Nikah</h2>
-					<span class="event__date">Minggu, 25 Desember 2022</span>
-					<span class="event__time">08:30 WIB – Selesai</span>
-				</div>
-				<div class="event__box" data-aos="fade-left">
-					<div class="event__img">
-						<img src="assets/img/event_icon2.png" alt="" class="event__icon">
-					</div>
-					<h2 class="event__title">Resepsi</h2>
-					<span class="event__date">Minggu, 25 Desember 2022</span>
-					<span class="event__time">10:00 WIB – Selesai</span>
-				</div>
-			</div>
-
-			<div class="event__place" data-aos="fade-up">
+			<h2 class="section-title">Event</h2>
+			<div class="event__container" data-aos="fade-down">
 				<div class="event__img">
-					<img src="assets/img/event_icon3.png" alt="" class="event__icon">
+					<img src="assets/img/event_icon1.png" alt="" class="event__icon">
 				</div>
-				<span class="event__hotel">ADIMULIA HOTEL MEDAN</span>
-				<span class="event__address">Jl. Pangeran Diponegoro No.8, Medan.</span>
-				<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.010375137561!2d98.67025851426268!3d3.585091951318914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131cdde6364c5%3A0x3f93784602afec1d!2sAdimulia%20Hotel%20Medan!5e0!3m2!1sid!2sid!4v1621423444770!5m2!1sid!2sid" data-fancybox data-type="iframe" data-preload="false" data-width="640" data-height="480">
-					<div class="button__with-icon">
+				<span class="day">Sunday</span>
+				<div class="date">
+					<span class="month">December</span>
+					<span class="number">25</span>
+					<span class="year">2022</span>
+				</div>
+				<div class="place">
+					<div class="place1">
+						<span class="place1__title">Akad Nikah</span>
+						<span>08:30 WIB</span>
+						<span>Adimulia Hotel Medan</span>
+					</div>
+					<div class="place__line"></div>
+					<div class="place2">
+						<span class="place2__title">Resepsi</span>
+						<span>10:00 WIB</span>
+						<span>Adimulia Hotel Medan</span>
+					</div>
+				</div>
+
+				<div class="button">
+					<a class="button__flex" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.010375137561!2d98.67025851426268!3d3.585091951318914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131cdde6364c5%3A0x3f93784602afec1d!2sAdimulia%20Hotel%20Medan!5e0!3m2!1sid!2sid!4v1621423444770!5m2!1sid!2sid" data-fancybox data-type="iframe" data-preload="false" data-width="640" data-height="480">
 						<i class='bx bx-map-alt button__icon'></i>
 						<span>Get Direction</span>
+					</a>
+				</div>
+
+				<!-- Countdown Timer -->
+				<div class="timer ">
+					<div class="timer__container bd-grid">
+						<div class="timer__box">
+							<p class="timer__number" id="days">0</p>
+							<span class="timer__description">Days</span>			
+						</div>
+						<div class="timer__box">
+							<p class="timer__number" id="hours">0</p>
+							<span class="timer__description">Hours</span>
+						</div>
+						<div class="timer__box">
+							<p class="timer__number" id="minutes">0</p>
+							<span class="timer__description">Minutes</span>
+						</div>
+						<div class="timer__box">
+							<p class="timer__number" id="seconds">0</p>
+							<span class="timer__description">Seconds</span>
+						</div>
 					</div>
-				</a>
+					<h4 id="timer-stop"></h4>
+				</div>
+				<!-- end countdown timer -->
 			</div>
 		</section>
 		<!-- ===== end event ===== -->
-
-		<!-- ===== COUNTDOWN TIMER ===== -->
-		<div class="timer section bd-container">
-			<h2 class="section-title">The Day!</h2>
-
-			<div class="timer__container bd-grid">
-				<div class="timer__box">
-					<p class="timer__number" id="days">0</p>
-					<span class="timer__description">Days</span>			
-				</div>
-				<div class="timer__box">
-					<p class="timer__number" id="hours">0</p>
-					<span class="timer__description">Hours</span>
-				</div>
-				<div class="timer__box">
-					<p class="timer__number" id="minutes">0</p>
-					<span class="timer__description">Minutes</span>
-				</div>
-				<div class="timer__box">
-					<p class="timer__number" id="seconds">0</p>
-					<span class="timer__description">Seconds</span>
-				</div>
-			</div>
-			<h4 id="timer-stop"></h4>
-		</div>
-		<!-- ===== end countdown timer ===== -->
-
+		
 		<!-- ===== QUOTES ===== -->
 		<section class="quotes bd-container">
 			<div class="quotes__container" data-aos="fade-down">
@@ -188,11 +183,31 @@
 		<!-- ===== end quotes ===== -->
 
 		<!-- ===== PROKES ===== -->
-		<section class="prokes section bd-container">
-			<h2 class="section-title">Dear Guest</h2>
-			<span class="prokes__description" data-aos="fade-down">Tanpa Mengurangi rasa hormat, untuk menjalankan sunnah Rasul dan syariat Islam, serta dikarenakan situasi Pandemi, kepada seluruh tamu undangan kami menghimbau hal berikut:</span>
-			<div class="prokes__img" data-aos="fade-down" data-aos-delay="100">
-				<img src="assets/img/prokes.png" alt="">
+		<section class="prokes section">
+			<div class="prokes__content bd-container">
+				<h2 class="section-title">Protokol Kesehatan</h2>
+				<span class="section-subtitle">Demi keamanan dan kenyamanan bersama, para hadirin undangan dihimbau untuk memenuhi beberapa peraturan berikut:</span>
+
+				<div class="prokes__container bd-grid" data-aos="fade-down">
+					<div class="prokes__box">
+						<div class="prokes__img">
+							<img src="assets/img/masker.png" alt="">
+						</div>
+						<span class="prokes__description">Gunakan Masker</span>
+					</div>
+					<div class="prokes__box">
+						<div class="prokes__img">
+							<img src="assets/img/jarak.png" alt="">
+						</div>
+						<span class="prokes__description">Jaga Jarak</span>
+					</div>
+					<div class="prokes__box">
+						<div class="prokes__img">
+							<img src="assets/img/salaman.png" alt="">
+						</div>
+						<span class="prokes__description">Cukup Bersalaman tanpa Bersentuhan</span>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- ===== end prokes ===== -->
@@ -216,7 +231,7 @@
 						<input type="url" class="message__input validate" name="url" required value="" id="message-url">
 					</div>
 
-					<a href="javascript:void" class="button__with-icon message__button" id="send-message" type="submit" title="Send">
+					<a href="javascript:void" class="button button__flex message__button" id="send-message" type="submit" title="Send">
 						<i class='bx bxl-whatsapp button__icon'></i>
 						<span>Kirim</span>
 					</a>
@@ -269,12 +284,12 @@
 	<!-- ===== POP UP ===== -->
 	<div class="popup" id="popup">
 		<div class="popup__container bd-container">
-			<div class="popup__content" data-aos="fade-down">
+			<div class="popup__content">
 				<h2 class="popup__subtitle">Welcome</h2>
 				<div class="popup__line"></div>
 				<h3 class="popup__subtitle2">You are invited to the wedding of</h3>
 				<h1 class="popup__title">Shinta & Rama</h1>
-				<div class="button__with-icon popup__btn" id="popup-btn">
+				<div class="button button__flex popup__btn" id="popup-btn">
 					<i class='bx bx-envelope button__icon'></i>
 					<span>Open Invitation</span>
 				</div>
