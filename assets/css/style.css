@@ -157,15 +157,11 @@ img{
 /* ===== BUTTONS ===== */
 .button{
 	background-color: var(--blue-color);
-	max-width: -webkit-max-content;
-	max-width: -moz-max-content;
+	padding: .75rem 1.5rem;
+	border-radius: .25rem;
+	cursor: pointer;
 	max-width: max-content;
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0.5rem 1.5rem;
-	border-radius: .5rem;
-	cursor: pointer;
 }
 .button__flex{
 	display: -webkit-box;
@@ -182,6 +178,10 @@ img{
 .button__icon{
 	font-size: 1.5rem;
 	margin-right: var(--mb-1);
+}
+.button__center{
+	margin-left: auto;
+	margin-right: auto;
 }
 /* ===== end buttons ===== */
 
@@ -535,7 +535,7 @@ img{
 /* ===== end quotes ===== */
 
 /* ===== PROKES ===== */
-.prokes .section-title{
+.prokes__title{
 	margin-bottom: 0;
 }
 .prokes__content{
@@ -560,69 +560,40 @@ img{
 /* ===== end prokes ===== */
 
 /* ===== MESSAGE ===== */
-.message__container{
-	background-color: var(--white-color);
-	border-radius: .5rem;
-	padding: 1rem;
-}
-.message__field{
-	margin-bottom: var(--mb-2);
-	position: relative;
-}
-.message__field:last-child{
-	margin-bottom: 0;
-}
-.message__field label{
-	font-weight: var(--medium-font);
-}
-.message__input,
-.message__textarea{
-	display: block;
-	outline: none;
-	border: none;
-	padding: .3rem 0;
-	border-bottom: 2px solid silver;
+.message__input{
 	width: 100%;
+	padding: 16px;
+	padding: 1rem;
+	border: 2px solid var(--blue-color);
+	border-radius: .5rem;
+	margin-bottom: var(--mb-1);
 	font-family: var(--text-font);
 	font-size: var(--normal-font-size);
 	color: var(--text-color);
 }
-.message__textarea{
-	height: 125px;
-	resize: none;
+.message ::-webkit-input-placeholder{
+	font-family: var(--text-font);
+	font-weight: var(--semi-bold-font);
+	font-size: var(--normal-font-size);
+	border: none;
 }
-.underline{
-	position: absolute;
-	height: 2px;
-	width: 100%;
-	bottom: 0;
+.message ::-moz-placeholder{
+	font-family: var(--text-font);
+	font-weight: var(--semi-bold-font);
+	font-size: var(--normal-font-size);
+	border: none;
 }
-.underline::before{
-	position: absolute;
-	content: "";
-	height: 100%;
-	width: 100%;
-	background: var(--blue-color);
-	-webkit-transform: scaleX(0);
-			transform: scaleX(0);
-	-webkit-transform-origin: center;
-			transform-origin: center;
-	-webkit-transition: -webkit-transform 0.3s ease;
-	transition: -webkit-transform 0.3s ease;
-	transition: transform 0.3s ease;
-	transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+.message :-ms-input-placeholder{
+	font-family: var(--text-font);
+	font-weight: var(--semi-bold-font);
+	font-size: var(--normal-font-size);
+	border: none;
 }
-.message__input:focus ~ .underline:before,
-.message__input:valid ~ .underline:before,
-.message__textarea:focus ~ .underline:before,
-.message__textarea:valid ~ .underline:before
-{
-	-webkit-transform: scaleX(1);
-			transform: scaleX(1);
-}
-.message__button{
-	max-width: 100%;
-	margin-top: var(--mb-2);
+.message::placeholder{
+	font-family: var(--text-font);
+	font-weight: var(--semi-bold-font);
+	font-size: var(--normal-font-size);
+	border: none;
 }
 
 /* Message Respon */
@@ -637,7 +608,9 @@ img{
 }
 #message-respon div.yes i,
 #message-respon div.no i{
+	font-size: 24px;
 	font-size: 1.5rem;
+	margin-right: 4.8px;
 	margin-right: .3rem;
 }
 /* ===== end message ===== */
@@ -838,6 +811,15 @@ footer .social__media-link{
 	}
 	/* ===== end couple ===== */
 
+	/* ===== MESSAGE ===== */
+	.message__form {
+		width: 500px;
+		-ms-grid-column-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/* ===== end message ===== */
+
 	/* ===== PROKES ===== */
 	.prokes__container{
 		-ms-grid-columns: (1fr)[3];
@@ -900,11 +882,11 @@ footer .social__media-link{
 	/* ===== end prokes ===== */
 
 	/* ===== MESSAGE ===== */
-	.message__container{
+	/*.message__container{
 		width: 60%;
 		margin-left: auto;
 		margin-right: auto;
-	}
+	}*/
 	/* ===== end message ===== */
 }
 
