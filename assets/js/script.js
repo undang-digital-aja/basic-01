@@ -63,47 +63,47 @@ const timerFunction = setInterval(() => {
 // ===== end countdown timer ===== //
 
 // ===== MESSAGE BOX via WhatsApp ===== //
-const messageForm = document.querySelector('.message__form');
+// const messageForm = document.querySelector('.message__form');
 
-$(document).on('click','#send-message', function(){
-	var inputMessage = document.getElementById('message-name');
+// $(document).on('click','#send-message', function(){
+// 	var inputMessage = document.getElementById('message-name');
 
-	// WhatsApp Settings
-	var walink = 'https://web.whatsapp.com/send',
-		phone = '6287896889778',
-		walink2 = '*Wedding Message Box* ',
-		text_yes = 'Terimakasih!',
-		text_no = 'Isi semua form lalu klik Kirim.';
+// 	// WhatsApp Settings
+// 	var walink = 'https://web.whatsapp.com/send',
+// 		phone = '6287896889778',
+// 		walink2 = '*Wedding Message Box* ',
+// 		text_yes = 'Terimakasih!',
+// 		text_no = 'Isi semua form lalu klik Kirim.';
 
-	// Smartphone Support
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-			var walink = 'whatsapp://send';
-		}
+// 	// Smartphone Support
+// 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+// 			var walink = 'whatsapp://send';
+// 		}
 
-	if("" != inputMessage.value){
-		// Call Input Form
-		var input_name = $("#message-name").val(),
-			input_textarea = $("#message-textarea").val(),
-			input_url = $("#message-url").val();
+// 	if("" != inputMessage.value){
+// 		// Call Input Form
+// 		var input_name = $("#message-name").val(),
+// 			input_textarea = $("#message-textarea").val(),
+// 			input_url = $("#message-url").val();
 
-		// Final WhatsApp URL
-		var messageWhatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
-			'*Nama* : ' + input_name + '%0A' +
-			'*Pesan* : ' + input_textarea + '%0A' +
-			'*Link* : ' + input_url + '%0A';
+// 		// Final WhatsApp URL
+// 		var messageWhatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
+// 			'*Nama* : ' + input_name + '%0A' +
+// 			'*Pesan* : ' + input_textarea + '%0A' +
+// 			'*Link* : ' + input_url + '%0A';
 
-		// WhatsApp Window Open 
-		window.open(messageWhatsapp,'_blank');
-		document.getElementById("message-respon").innerHTML = '<div class="yes"><i class="bx bx-check"></i>'+text_yes+ '</div>';
+// 		// WhatsApp Window Open 
+// 		window.open(messageWhatsapp,'_blank');
+// 		document.getElementById("message-respon").innerHTML = '<div class="yes"><i class="bx bx-check"></i>'+text_yes+ '</div>';
 
-		// reset form
-		messageForm.reset();
-	}else{
-		document.getElementById("message-respon").innerHTML = '<div class="no"><i class="bx bx-x"></i>'+text_no+'</div>';
-	}
-});
+// 		// reset form
+// 		messageForm.reset();
+// 	}else{
+// 		document.getElementById("message-respon").innerHTML = '<div class="no"><i class="bx bx-x"></i>'+text_no+'</div>';
+// 	}
+// });
 
-document.getElementById('message-url').value = "https://www.google.com/";
+// document.getElementById('message-url').value = "https://www.google.com/";
 // ===== end message box via whatsapp ===== //
 
 // ===== BACKSOUND ===== //
